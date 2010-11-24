@@ -1,0 +1,11 @@
+<?php
+
+include_once('worx_catalog.features.inc');
+
+function worx_catalog_form_alter(&$form, &$form_state, $form_id) {
+  switch($form_id) {
+    case 'context_admin_term_options_menu_taxonomy_form_term':
+      taxonomy_image_form_alter($form, $form_state, 'taxonomy_form_term');
+      break;
+  }
+}
